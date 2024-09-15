@@ -1,0 +1,11 @@
+.add-todo-container {
+    margin-top: 20px;
+  }
+  
+  .add-todo-container h2 {
+    color: #333;
+  }
+  
+  .add-todo-container button {
+    margin-top: 10px;
+  }

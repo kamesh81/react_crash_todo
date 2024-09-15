@@ -1,17 +1,21 @@
-import React, { Component} from 'react';
-import TodoItem from './TodoItem';
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
 
 class Todos extends Component {
-  render(){
-    return this.props.todos.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete}/>
-    ));
-}
-}
-//PropTypes
-Todos.propTypes = {
-  todos: PropTypes.array.isRequired
+  render() {
+    return (
+      <div>
+        {this.props.todos.map((todo) => (
+          <div key={todo.id} className="todo-item">
+            <input
+              type="checkbox"
+              onChange={this.props.markComplete.bind(this, todo.id)}
+            />
+            {todo.title}
+          </div>
+        ))}
+      </div>
+    );
+  }
 }
 
 export default Todos;
