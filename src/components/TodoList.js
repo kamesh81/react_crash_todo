@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
-const SPREADSHEET_ID = ''; // Make sure this is correct
+const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
 const RANGE = 'Sheet1!A2:D'; // Adjust if your sheet name is different
 
 // Move this function outside of the component

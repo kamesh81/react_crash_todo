@@ -5,7 +5,7 @@ import AppContent from './components/AppContent';
 import AddTodo from './components/AddTodo';
 import './App.css';
 
-const CLIENT_ID = '';
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 
 function App() {
   return (
